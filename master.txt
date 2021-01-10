@@ -1,3 +1,4 @@
 master
 1. master 생성
 2. master master 브런치 푸쉬
+3. master브런치에서 내용 수정후 푸쉬
