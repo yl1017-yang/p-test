@@ -1,2 +1,3 @@
 master
 1. master 생성
+2. master master 브런치 푸쉬
