@@ -1,3 +1,4 @@
 1. product 생성
 2. product 브런치 푸쉬
 3. product 브런치에서 내용 수정 후 푸쉬
+4. product33와 같이 내용 수정후 푸쉬
