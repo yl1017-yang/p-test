@@ -11,3 +11,5 @@
 5. hohoho 
 
 6. push
+
+7. new
