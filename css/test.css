@@ -1,0 +1,26 @@
+.sass {
+  font-size: 20px;
+  background: #ccc;
+}
+
+:root {
+  --main-color:#eee;
+}
+
+.section_warp {
+  text-align: center;
+  margin-bottom: 4px;
+  background-color: aquamarine;
+}
+
+.section_warp h2 {
+  font-size: 3em;
+  color: #25aade;
+  margin-bottom: 10px;
+}
+
+.section_warp p {
+  font-size: 1em;
+  color: #777;
+}
+/*# sourceMappingURL=test.css.map */
