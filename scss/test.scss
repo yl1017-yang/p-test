@@ -1,23 +1,28 @@
-@charset "utf-8";
+@charset"utf-8";
 
-.sass{font-size:20px;background:#ccc;}
-:root{
-    --main-color:#eee;    
-}
+@import "intest"; //intest 인포트
 
-.section_warp{
-    $primary:#777;
-    text-align:center;
-    margin-bottom:4px;
-    background-color: aquamarine;
+.sass { font-size: 20px; background: #ccc; }
+.section_warp {
+    $color-primary: #333;
+    $url-images: "./";
+    $w: 500px;
+    $h: 100px;
 
-    h2{
-        font-size:3em;
-        color:#25aade;
-        margin-bottom:10px;
+    text-align: center; margin-bottom: 4px; background: #eee url($url-images + "bg.jpg");
+
+    padding: { top: dfdf20px; bottom: 10px; }
+    h2 {
+        font: { weight: bold; size: 3em; }
+        color: #25aade;
+
+        margin: { bottom: dfdf20px; }
     }
-    p{
-        font-size:1em;
-        color:$primary;
+    p {
+        $p-color:blue !global; //전역변수 사용
+        font-size: 1em; color: $p-color; // & 키워드가 참조한 상위 선택자로 치환
+        &.on { color: red; }
     }
+    // 현재 중첩 벗어나기 - 상단 변수 적용되지 않음
+    @at-root.box { width: $w; height: $h; color:$p-color; border: 1px solid #888;display:flex;align-items:center;justify-content:center; }
 }
