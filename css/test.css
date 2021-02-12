@@ -1,16 +1,19 @@
 @charset "UTF-8";
 /* 인포트 주석 */
 .intest {
-  font-size: 20px;
+  font-size: 2em;
+  font-weight: bold;
   background: #ccc;
   border: 3px solid #000;
   margin: 50px;
   padding: 20px;
 }
-
 .intest h3 {
   font-size: 15px;
   color: #ff0080;
+}
+.intest .if {
+  height: 130px;
 }
 
 .sass {
@@ -25,23 +28,22 @@
   padding-top: dfdf20px;
   padding-bottom: 10px;
 }
-
 .section_warp h2 {
+  font-size: 2.8em;
   font-weight: bold;
-  font-size: 3em;
   color: #25aade;
-  margin-bottom: dfdf20px;
+  margin-bottom: 20px;
 }
-
+.section_warp h2::after {
+  content: "-큰폰트";
+}
 .section_warp p {
   font-size: 1em;
   color: blue;
 }
-
 .section_warp p.on {
   color: red;
 }
-
 .box {
   width: 500px;
   height: 100px;
@@ -56,5 +58,4 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-/*# sourceMappingURL=test.css.map */
+}/*# sourceMappingURL=test.css.map */
