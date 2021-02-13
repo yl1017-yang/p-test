@@ -1,39 +1,47 @@
 @charset "UTF-8";
 /* 인포트 주석 */
 .intest {
-<<<<<<< HEAD
-  margin: 50px auto;
-  background: #f7ffdb;
-=======
   font-size: 2em;
   font-weight: bold;
   background: #ccc;
   border: 3px solid #000;
   margin: 50px;
->>>>>>> e8fb29bb9241a4d92508f5860748713a249c4ee4
   padding: 20px;
-  width: calc(100% - 500px);
-  font-size: 30px;
 }
+
 .intest h3 {
   font-size: 15px;
   color: #ff0080;
+  float: left;
 }
+
 .intest .if {
   height: 130px;
 }
 
-.intest p {
-  color: #aaa;
+.intest .if::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
-.intest p::after {
-  content: "하하하문자연산";
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reversewrap;
-          flex-flow: row-reversewrap;
-  color: #000;
+.intest .transition-buttom {
+  border: 1px solid red;
+  background: #eee;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 6px 10px #eee;
+  box-shadow: 2px 6px 10px #eee;
+}
+
+.intest .transition-buttom::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .sass {
@@ -48,28 +56,39 @@
   padding-top: dfdf20px;
   padding-bottom: 10px;
 }
+
 .section_warp h2 {
+  margin-bottom: 20px;
   font-size: 2.8em;
   font-weight: bold;
-<<<<<<< HEAD
-  font-size: 3em;
-  color: #de9425;
-  margin-bottom: dfdf20px;
-=======
-  color: #25aade;
-  margin-bottom: 20px;
+  color: red;
 }
+
 .section_warp h2::after {
-  content: "-큰폰트";
->>>>>>> e8fb29bb9241a4d92508f5860748713a249c4ee4
+  content: '-큰폰트';
+  border-color: red;
 }
+
 .section_warp p {
   font-size: 1em;
   color: blue;
 }
+
 .section_warp p.on {
   color: red;
 }
+
+.section_warp div {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: blue;
+}
+
+.section_warp div::after {
+  content: '-큰폰트';
+  border-color: blue;
+}
+
 .box {
   width: 500px;
   height: 100px;
@@ -84,4 +103,21 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}/*# sourceMappingURL=test.css.map */
+}
+
+.box .btn, .box .btn-type {
+  display: inline-block;
+  padding: 1em 4em;
+  margin: 20px;
+  background-color: aquamarine;
+  color: #333;
+}
+
+.box .btn-type {
+  border: 1px solid black;
+}
+
+.box .btn-type:hover {
+  background-color: beige;
+}
+/*# sourceMappingURL=test.css.map */

@@ -4,44 +4,50 @@
 
 .sass { font-size: 20px; background: #ccc; }
 .section_warp {
-<<<<<<< HEAD
-    $color-primary: #25aade !global;
-=======
     $color-primary: #333;
     $color-second: #25aade;
->>>>>>> e8fb29bb9241a4d92508f5860748713a249c4ee4
     $url-images: "./";
     $w: 500px;
     $h: 100px;
+    
 
-    // mixin 사용 - 재활용
-    @mixin large-text {
+    // mixin 사용 -매개변수
+    @mixin large-text($c-color) {
         font:{size:2.8em;weight:bold;}
-        color:$color-second;
-        &::after{content: '-큰폰트';}
+        color:$c-color;
+        &::after{content: '-큰폰트';@content;border-color:$c-color;}        
     }
+
+    // mixin 사용 - transition / btn / radius / bos shadow
+    // 선택자간의 연관성이 존재한다면 extend를 사용하고, 연관성은 없지만 코드가 겹치는 선택자들이라면 mixin으로 소스코드의 중복을 없애기 위해 사용해야합니다.
 
     text-align: center; margin-bottom: 4px; background: #eee url($url-images + "bg.jpg");
 
     padding: { top: dfdf20px; bottom: 10px; }
     h2 {
-<<<<<<< HEAD
-        font: { weight: bold; size: 3em; }
-        color: #de9425;
-
-        margin: { bottom: dfdf20px; }
-=======
-        @include large-text;
         margin: { bottom: 20px; }
->>>>>>> e8fb29bb9241a4d92508f5860748713a249c4ee4
+        @include large-text(red); //
     }
     p {
         $p-color:blue !global; //전역변수 사용
         font-size: 1em; color: $p-color; // & 키워드가 참조한 상위 선택자로 치환
         &.on { color: red; }
     }
-    // 현재 중첩 벗어나기 - 상단 변수 적용되지 않음
-    @at-root.box { width: $w; height: $h; color:$p-color; border: 1px solid #888;display:flex;align-items:center;justify-content:center; }
+    div{@include large-text(blue);}
 
+    // 현재 중첩 벗어나기 - 상단 변수 적용되지 않음
+    @at-root.box { 
+        width: $w; height: $h; color:$p-color; border: 1px solid #888;display:flex;align-items:center;justify-content:center;
+
+        // extend 선택자 - 연관성이 있고 종속되는 클래스가 필요할시 extend 사용
+        .btn{display:inline-block;padding:1em 4em;margin:20px;background-color: aquamarine; color:$color-primary;}
+        .btn-type{            
+            border:1px solid black;
+            @extend .btn;
+        }
+        .btn-type:hover{background-color: beige;}
+    }
+
+    
 
 }
