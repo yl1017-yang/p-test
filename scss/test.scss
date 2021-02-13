@@ -4,19 +4,36 @@
 
 .sass { font-size: 20px; background: #ccc; }
 .section_warp {
+<<<<<<< HEAD
     $color-primary: #25aade !global;
+=======
+    $color-primary: #333;
+    $color-second: #25aade;
+>>>>>>> e8fb29bb9241a4d92508f5860748713a249c4ee4
     $url-images: "./";
     $w: 500px;
     $h: 100px;
+
+    // mixin 사용 - 재활용
+    @mixin large-text {
+        font:{size:2.8em;weight:bold;}
+        color:$color-second;
+        &::after{content: '-큰폰트';}
+    }
 
     text-align: center; margin-bottom: 4px; background: #eee url($url-images + "bg.jpg");
 
     padding: { top: dfdf20px; bottom: 10px; }
     h2 {
+<<<<<<< HEAD
         font: { weight: bold; size: 3em; }
         color: #de9425;
 
         margin: { bottom: dfdf20px; }
+=======
+        @include large-text;
+        margin: { bottom: 20px; }
+>>>>>>> e8fb29bb9241a4d92508f5860748713a249c4ee4
     }
     p {
         $p-color:blue !global; //전역변수 사용
@@ -25,4 +42,6 @@
     }
     // 현재 중첩 벗어나기 - 상단 변수 적용되지 않음
     @at-root.box { width: $w; height: $h; color:$p-color; border: 1px solid #888;display:flex;align-items:center;justify-content:center; }
+
+
 }
