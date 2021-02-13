@@ -4,7 +4,7 @@
 
 .sass { font-size: 20px; background: #ccc; }
 .section_warp {
-    $color-primary: #333;
+    $color-primary: #25aade !global;
     $url-images: "./";
     $w: 500px;
     $h: 100px;
@@ -14,7 +14,7 @@
     padding: { top: dfdf20px; bottom: 10px; }
     h2 {
         font: { weight: bold; size: 3em; }
-        color: #25aade;
+        color: #de9425;
 
         margin: { bottom: dfdf20px; }
     }

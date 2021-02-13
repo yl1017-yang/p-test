@@ -1,5 +1,7 @@
 /* 인포트 주석 */
 .intest { 
-    font-size: 20px; background: #ccc; border:3px solid #000;margin:50px;padding:20px;
+    margin:50px auto;background: #f7ffdb;padding:20px;width:calc(100% - 500px);font-size:15px * 2;
     h3{font-size:15px;color:#ff0080}
+    p{color:#aaa;}
+    p::after{content: "하하하" + 문자연산;flex-flow: row + "-reverse" + "" + wrap;color:#000;}
 }
